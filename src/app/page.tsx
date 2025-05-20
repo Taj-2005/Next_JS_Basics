@@ -1,6 +1,6 @@
 'use client';
 
-import { signInWithGithub, signOutFromGithub } from '@/app/lib/actions/route';
+import { signInWithGithub, signOutFromGithub } from '@/app/lib/actions/auth';
 import { useSession } from 'next-auth/react';
 
 export default function Home() {
