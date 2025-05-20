@@ -2,6 +2,7 @@
 
 import { signInWithGithub, signOutFromGithub } from '@/app/lib/actions/auth';
 import { useSession } from 'next-auth/react';
+import Image from 'next/image';
 
 export default function Home() {
   const { data: session } = useSession();
@@ -12,6 +13,7 @@ export default function Home() {
 
       {session ? (
         <>
+          <Image src="/avatar.webp" alt="User avatar" width={200} height={200} className='rounded-full'/>
           <p className="text-lg">Signed in as {session.user?.email}</p>
           <button
             onClick={signOutFromGithub}
