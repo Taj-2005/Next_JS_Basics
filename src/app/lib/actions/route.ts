@@ -1,6 +1,6 @@
 'use client';
 
-import { signIn, signOut } from 'next-auth/react';
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 export const signInWithGithub = async () => {
   await signIn('github', { callbackUrl: '/' });
